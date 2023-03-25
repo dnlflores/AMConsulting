@@ -1,3 +1,5 @@
+import UserProvider from '@/context/User';
+import { ModalProvider, Modal } from '@/context/Modal';
 import './globals.css'
 
 export default function RootLayout({ children }) {
@@ -8,7 +10,14 @@ export default function RootLayout({ children }) {
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>{children}</body>
+      <body>
+        <ModalProvider>
+          <UserProvider>
+            <Modal />
+            {children}
+          </UserProvider>
+        </ModalProvider>
+      </body>
     </html>
   )
 }
