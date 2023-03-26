@@ -1,10 +1,11 @@
-import GoogleLoginButton from "@/app/components/GoogleLoginButton";
+import SignInForm from "@/app/components/SignUpForm"
+import LogInButton from "@/app/components/login-btn"
 
-export default function SignInForm() {
+export default function Home() {
 
     return (
-        <form>
-            <GoogleLoginButton />
-        </form>
+        <>
+            <SignInForm />
+        </>
     )
 }
